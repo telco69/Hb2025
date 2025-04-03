@@ -1,4 +1,4 @@
-25255369016571882
+25257115033071608
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -101177,6 +101177,13 @@ SITIME_SIT1534
 0
 4
 4
+dtuspace_ipc
+SML_P11
+
+
+0
+2
+2
 dtuspace_ipc
 SOD250X130X120L30X30N
 Diode, Small Outline Diode (SOD); 1.70 mm L X 1.30 mm W X 1.20 mm H body

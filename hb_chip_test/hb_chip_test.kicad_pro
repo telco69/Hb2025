@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -171,7 +177,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +206,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -452,6 +465,74 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.5,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Analog",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.5,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Digital",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.5,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "High Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 2.0,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.5,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Low Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -459,7 +540,24 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "High Power",
+        "pattern": "+10V"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "-10V"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(OPA2-Vo)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(OPA1-Vo)"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -527,11 +625,437 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "COTS MPN",
+          "name": "COTS MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Capacitance",
+          "name": "Capacitance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Capacitance Tolerance",
+          "name": "Capacitance Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case Code (Imperial)",
+          "name": "Case Code (Imperial)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case Code (Metric)",
+          "name": "Case Code (Metric)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case size",
+          "name": "Case size",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case/Package",
+          "name": "Case/Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case/Package (SI)",
+          "name": "Case/Package (SI)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Component value",
+          "name": "Component value",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Contact Material",
+          "name": "Contact Material",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Contact Plating",
+          "name": "Contact Plating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Current Rating",
+          "name": "Current Rating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Depth",
+          "name": "Depth",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Dielectric",
+          "name": "Dielectric",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Dielectric Characteristic",
+          "name": "Dielectric Characteristic",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Dissipation Factor",
+          "name": "Dissipation Factor",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Dropout Voltage",
+          "name": "Dropout Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Frequency",
+          "name": "Frequency",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Halogen Free Status",
+          "name": "Halogen Free Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Input Voltage (DC)",
+          "name": "Input Voltage (DC)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Insulation Resistance",
+          "name": "Insulation Resistance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Lead Free",
+          "name": "Lead Free",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Lead-Free Status",
+          "name": "Lead-Free Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Length",
+          "name": "Length",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Lifecycle Status",
+          "name": "Lifecycle Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN_1",
+          "name": "MPN_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Lifecycle Status",
+          "name": "Manufacturer Lifecycle Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Material",
+          "name": "Material",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Max Operating Temperature",
+          "name": "Max Operating Temperature",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Min Operating Temperature",
+          "name": "Min Operating Temperature",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mount",
+          "name": "Mount",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mounting Style",
+          "name": "Mounting Style",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Number of Outputs",
+          "name": "Number of Outputs",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Number of Pins",
+          "name": "Number of Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Number of Regulated Outputs",
+          "name": "Number of Regulated Outputs",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Operating Temperature",
+          "name": "Operating Temperature",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Output Capacitor Type",
+          "name": "Output Capacitor Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Output Current",
+          "name": "Output Current",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Output Voltage",
+          "name": "Output Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Packaging",
+          "name": "Packaging",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Polarity",
+          "name": "Polarity",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Power Rating",
+          "name": "Power Rating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Quiescent Current",
+          "name": "Quiescent Current",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "REACH SVHC",
+          "name": "REACH SVHC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "REACH SVHC Compliance",
+          "name": "REACH SVHC Compliance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Radiation Hardening",
+          "name": "Radiation Hardening",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Resistance",
+          "name": "Resistance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Resistance Tolerance",
+          "name": "Resistance Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Reviewed",
+          "name": "Reviewed",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "RoHS",
+          "name": "RoHS",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Params",
+          "name": "Sim.Params",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Size-Height",
+          "name": "Size-Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Size-Length",
+          "name": "Size-Length",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Size-Width",
+          "name": "Size-Width",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Specification",
+          "name": "Specification",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "TCR",
+          "name": "TCR",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Temperature Coefficient",
+          "name": "Temperature Coefficient",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Termination",
+          "name": "Termination",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Thickness",
+          "name": "Thickness",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Tolerance",
+          "name": "Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage",
+          "name": "Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage Rating",
+          "name": "Voltage Rating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage Rating (AC)",
+          "name": "Voltage Rating (AC)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage Rating (DC)",
+          "name": "Voltage Rating (DC)",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Width",
+          "name": "Width",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
