@@ -16404,6 +16404,12 @@
 		(uuid "5bb5a93d-f84c-4ef4-84b8-51237cb25405")
 	)
 	(junction
+		(at 382.27 205.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f1175ff-9a51-4fab-a5ca-026fd149843b")
+	)
+	(junction
 		(at 90.17 254)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -19635,7 +19641,7 @@
 	)
 	(wire
 		(pts
-			(xy 382.27 185.42) (xy 382.27 220.98)
+			(xy 382.27 185.42) (xy 382.27 205.74)
 		)
 		(stroke
 			(width 0)
@@ -19872,6 +19878,16 @@
 			(type default)
 		)
 		(uuid "89b69db7-e718-415f-812d-473573664557")
+	)
+	(wire
+		(pts
+			(xy 394.97 209.55) (xy 394.97 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89da5f95-2f1e-4a8d-9742-122e2a93a840")
 	)
 	(wire
 		(pts
@@ -21815,6 +21831,16 @@
 	)
 	(wire
 		(pts
+			(xy 382.27 205.74) (xy 391.16 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df2e2204-e27a-40e3-b650-e482182d045e")
+	)
+	(wire
+		(pts
 			(xy 99.06 31.75) (xy 99.06 16.51)
 		)
 		(stroke
@@ -22162,6 +22188,16 @@
 			(type default)
 		)
 		(uuid "f61aac0d-c66f-4af7-b34c-8ed0cef5651d")
+	)
+	(wire
+		(pts
+			(xy 382.27 205.74) (xy 382.27 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6a70b67-46eb-40b8-86ab-b2e4e9a09e78")
 	)
 	(wire
 		(pts
@@ -36750,6 +36786,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 394.97 210.82 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69bf3f27-d583-4a15-b6d0-361887800aaa")
+		(property "Reference" "#PWR0106"
+			(at 394.97 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 394.97 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 394.97 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 394.97 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 394.97 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42b651db-8955-4bb9-a4b2-6edecc9543ee")
+		)
+		(instances
+			(project "hb_chip_test"
+				(path "/38c13ffe-3314-4700-ad7b-2ba14a3a5578"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "10-Resistor:R_0805_1M21_CID10.9.5950")
 		(at 363.22 165.1 90)
 		(unit 1)
@@ -43752,6 +43855,183 @@
 			(project "hb_chip_test"
 				(path "/38c13ffe-3314-4700-ad7b-2ba14a3a5578"
 					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dtuspace:31-5431-2010_CID2.5.196")
+		(at 394.97 205.74 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a68844b7-39d6-499b-81fb-5ff74d802977")
+		(property "Reference" "J7"
+			(at 394.97 199.39 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+			)
+		)
+		(property "Value" "31-5431-2010_CID2.5.196"
+			(at 393.7 207.01 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "dtuspace_ipc:AMPHENOL_31-5431-2010"
+			(at 393.7 208.28 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://partkeepr.local.space.dtu.dk/api/part_attachments/653/getFile"
+			(at 393.7 209.55 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "CONN BNC JACK R/A 50 OHM PCB"
+			(at 394.97 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2"
+			(at 394.97 205.74 0)
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SPICE"
+			(at 393.7 210.82 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "type=\"J\" model=\"31-5431-2010\" lib=\"\""
+			(at 394.97 205.74 0)
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "31-5431-2010"
+			(at 394.97 201.93 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+			)
+		)
+		(property "Component value" "31-5431-2010_CID2.5.196"
+			(at 393.7 215.9 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Contact Material" "Phosphor Bronze"
+			(at 393.7 217.17 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Contact Plating" "Gold"
+			(at 393.7 218.44 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Frequency" "None"
+			(at 393.7 219.71 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Lead-Free Status" "Lead Free"
+			(at 393.7 220.98 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mounting Style" "Through Hole"
+			(at 393.7 222.25 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "Packaging" "Bulk"
+			(at 393.7 223.52 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" "Compliant"
+			(at 393.7 224.79 0)
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a6fae0d7-54b7-4d5d-bb39-4c78d297ad32")
+		)
+		(pin "1"
+			(uuid "78d637d8-0c1d-4e1f-bb17-2232613239a4")
+		)
+		(instances
+			(project "hb_chip_test"
+				(path "/38c13ffe-3314-4700-ad7b-2ba14a3a5578"
+					(reference "J7")
 					(unit 1)
 				)
 			)
