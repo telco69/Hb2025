@@ -7,7 +7,7 @@
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
         "board_outline_line_width": 0.05,
-        "copper_line_width": 0.2,
+        "copper_line_width": 0.3,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
         "copper_text_size_v": 1.5,
@@ -118,7 +118,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 1.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -130,7 +130,7 @@
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_diameter": 0.3,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -451,7 +451,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.3,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -461,7 +461,7 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.3,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -556,6 +556,42 @@
       {
         "netclass": "High Power",
         "pattern": "Net-(OPA1-Vo)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U10-V+)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U10-V-)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U13-V+)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U13-V-)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U10-Vo)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(U13-Vo)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "Net-(R51-Pad1)"
+      },
+      {
+        "netclass": "High Power",
+        "pattern": "V_wire"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "+5V"
       }
     ]
   },
